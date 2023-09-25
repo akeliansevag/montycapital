@@ -5,11 +5,21 @@
  * navigation support for dropdown menus.
  */
 ( function() {
+	const notifyBtn = document.querySelector(".notify-btn");
+	const notifyBtnText = notifyBtn.value;
+	
+	document.querySelector(".wpcf7-form").addEventListener("submit", function(){
+		notifyBtn.disabled = true;
+		notifyBtn.classList.add("disabled");
+		notifyBtn.value = "Submitting...";
+	});
+
 	document.addEventListener('wpcf7submit', function(event) {
-		console.log(event);
 		const formMessage = document.querySelector("#form-message");
 		const apiResponse  = event.detail.apiResponse;
-		
+		notifyBtn.disabled = false;
+		notifyBtn.classList.remove("disabled");
+		notifyBtn.value = notifyBtnText;
 
 		if(apiResponse.status == "validation_failed"){
 			if(apiResponse.invalid_fields.length > 0){
@@ -22,18 +32,11 @@
 		formMessage.classList.remove("red-text");
 		formMessage.classList.add("yellow-text");
 		formMessage.innerHTML = apiResponse.message;
-		/*if (event.detail.status === 'mail_sent') {
-			var errors = event.detail.apiResponse.errors;
-			var errorMessage = '<ul>';
-	
-			for (var error in errors) {
-				errorMessage += '<li>' + errors[error] + '</li>';
-			}
-	
-			errorMessage += '</ul>';
-	
-			document.getElementById('custom-error-div').innerHTML = errorMessage;
-		}*/
+		
+		
 	}, false);
 	
+	
+
+
 }() );

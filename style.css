@@ -169,3 +169,6 @@ input[type="submit"] {
 .w-95 {
   width: 95%;
 }
+.disabled {
+  opacity: 0.8;
+}
