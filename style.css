@@ -155,10 +155,17 @@ input[type="submit"] {
   display: none;
 }
 .wpcf7-not-valid-tip {
-  position: absolute;
-  left: 0;
+  display: none;
 }
 
-form.invalid .wpcf7-response-output {
+.wpcf7-response-output {
   display: none;
+}
+
+.red-text {
+  color: #ff3a3a;
+}
+
+.w-95 {
+  width: 95%;
 }

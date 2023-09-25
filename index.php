@@ -66,6 +66,7 @@
                         <p class="mt-3">Add your email and get notified when we’re live</p>
                         <div class="mt-5">
                             <?= do_shortcode('[contact-form-7 id="a8e5c13" title="Contact form 1"]'); ?>
+
                         </div>
                     </div>
                 </div>
