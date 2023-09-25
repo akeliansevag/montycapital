@@ -21,3 +21,144 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+@font-face {
+  font-family: "Supreme-Regular";
+  src: url("fonts/Supreme-Regular.woff2") format("woff2"),
+    url("fonts/Supreme-Regular.woff") format("woff"),
+    url("fonts/Supreme-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Supreme-Medium";
+  src: url("fonts/Supreme-Medium.woff2") format("woff2"),
+    url("fonts/Supreme-Medium.woff") format("woff"),
+    url("fonts/Supreme-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Supreme-Bold";
+  src: url("fonts/Supreme-Bold.woff2") format("woff2"),
+    url("fonts/Supreme-Bold.woff") format("woff"),
+    url("fonts/Supreme-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+.supreme-medium {
+  font-family: "Supreme-Medium";
+}
+
+body {
+  font: 1rem/1.5 "Supreme-Regular", "Helvetica Neue", Arial;
+  background-color: #5b6670;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin: 0;
+  font-family: "Supreme-Bold";
+}
+
+p {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+div {
+  position: relative;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+select,
+input,
+button,
+textarea {
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+input {
+  border: 0;
+  border-bottom: 1px solid #8d939f;
+  background-color: transparent;
+  outline: 0;
+}
+input::placeholder {
+  color: white;
+}
+button,
+input[type="submit"] {
+  background-color: #c2b35b;
+  color: #000000;
+  border: 0;
+  font-family: "Supreme-Medium";
+}
+.yellow-text {
+  color: #c2b35b;
+}
+.mt-6 {
+  margin-top: 80px;
+}
+.footer {
+  background-color: #525c65;
+}
+.footer h2 {
+  font-size: 18px;
+}
+.footer span {
+  font-size: 12px;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+.wpcf7-not-valid-tip {
+  position: absolute;
+  left: 0;
+}
+
+form.invalid .wpcf7-response-output {
+  display: none;
+}
