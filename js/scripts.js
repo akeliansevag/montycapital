@@ -10,15 +10,14 @@
 	
 	document.querySelector(".wpcf7-form").addEventListener("submit", function(){
 		notifyBtn.disabled = true;
-		notifyBtn.classList.add("disabled");
-		notifyBtn.value = "Submitting...";
+		notifyBtn.classList.add("invisible");
 	});
 
 	document.addEventListener('wpcf7submit', function(event) {
 		const formMessage = document.querySelector("#form-message");
 		const apiResponse  = event.detail.apiResponse;
 		notifyBtn.disabled = false;
-		notifyBtn.classList.remove("disabled");
+		notifyBtn.classList.remove("invisible");
 		notifyBtn.value = notifyBtnText;
 
 		if(apiResponse.status == "validation_failed"){
