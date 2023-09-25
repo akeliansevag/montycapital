@@ -63,7 +63,7 @@
                             </defs>
                         </svg>
                         <h1 class="mt-6">Our website is under construction</h1>
-                        <p class="mt-3">Add your email and get notified when we’re live!</p>
+                        <p class="mt-3">Add your email and get notified when we’re live</p>
                         <div class="mt-5">
                             <?= do_shortcode('[contact-form-7 id="a8e5c13" title="Contact form 1"]'); ?>
 
